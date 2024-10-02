@@ -14,5 +14,4 @@ public interface ExerciseRepository extends JpaRepository<Exercise, Long> {
 
     List<Exercise> findExercisesByType(String type);
 
-    Exercise insertExercise(Exercise exercise);
 }

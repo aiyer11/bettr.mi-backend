@@ -1,0 +1,19 @@
+{
+  "name": "Strength Workout A",
+  "workoutType": "Strength",
+  "exercises": [
+    {
+      "name": "Bench Press",
+      "sets": "3",
+      "reps": "5",
+      "weight": "215.0"
+    },
+    {
+      "name": "Squat",
+      "sets": "3",
+      "reps": "5",
+      "weight": "315.0"
+    }
+  ],
+  "duration": "60"
+}
