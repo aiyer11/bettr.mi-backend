@@ -1,1 +1,1 @@
-# fitness-app
+# bettr.mi Backend Service
