@@ -1,16 +1,17 @@
 package com.arjun.fitnessapp.Workout;
 
+
+import lombok.Getter;
+
+@Getter
 public enum WorkoutType {
     CARDIO("Cardio"),
     STRENGTH("Strength");
 
-    private String type;
+    private final String type;
 
     WorkoutType(String type){
         this.type = type;
     }
 
-    public String getType(){
-        return type;
-    }
 }
