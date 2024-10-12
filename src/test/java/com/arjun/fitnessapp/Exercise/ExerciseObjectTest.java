@@ -1,5 +1,6 @@
 package com.arjun.fitnessapp.Exercise;
 
+import com.arjun.fitnessapp.model.Exercise;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,5 +1,7 @@
-package com.arjun.fitnessapp.Workout;
+package com.arjun.fitnessapp.repository;
 
+import com.arjun.fitnessapp.model.Workout;
+import com.arjun.fitnessapp.model.WorkoutType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

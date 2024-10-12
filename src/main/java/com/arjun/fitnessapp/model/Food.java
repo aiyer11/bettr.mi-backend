@@ -1,10 +1,11 @@
-package com.arjun.fitnessapp.Food;
+package com.arjun.fitnessapp.model;
 
-import com.arjun.fitnessapp.Meal.MealType;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.HashMap;
 
 @Getter
 @Setter
@@ -16,9 +17,6 @@ public class Food {
 
     @Column(name="serving_size")
     private ServingSize servingSize;
-
-    @Column(name="servings")
-    private double servings;
 
     @Column(name="meal")
     private MealType mealType;
@@ -38,6 +36,8 @@ public class Food {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private HashMap<String,Double> macros;
+
     public Food(String name, ServingSize servingSize, MealType mealType, double calories, double carbs, double protein, double fats)
     {
         this.name = name;
@@ -47,5 +47,7 @@ public class Food {
         this.carbs = carbs;
         this.protein = protein;
         this.fats = fats;
+        this.macros = new HashMap<>();
     }
+
 }

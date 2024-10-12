@@ -1,7 +1,11 @@
 package com.arjun.fitnessapp.Workout;
 
-import com.arjun.fitnessapp.Exercise.Exercise;
-import com.arjun.fitnessapp.Exercise.ExerciseRepository;
+import com.arjun.fitnessapp.model.Exercise;
+import com.arjun.fitnessapp.model.Workout;
+import com.arjun.fitnessapp.model.WorkoutType;
+import com.arjun.fitnessapp.repository.ExerciseRepository;
+import com.arjun.fitnessapp.repository.WorkoutRepository;
+import com.arjun.fitnessapp.service.WorkoutService;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -39,7 +43,7 @@ public class WorkoutServiceTest {
         exerciseList.add(exercise1);
 
         assertEquals(workout.getName(),"Strength Workout A","Expecting workout name to match");
-        assertEquals(workout.getWorkoutType().getType(),WorkoutType.STRENGTH.getType(), "Expecting workout type to match");
+        assertEquals(workout.getWorkoutType().getType(), WorkoutType.STRENGTH.getType(), "Expecting workout type to match");
         assertEquals(workout.getExerciseList(), exerciseList, "Expecting exercise list to match");
         assertEquals(workout.getDuration(),60,"Expecting duration to match");
 

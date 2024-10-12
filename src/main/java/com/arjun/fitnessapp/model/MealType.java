@@ -1,4 +1,4 @@
-package com.arjun.fitnessapp.Meal;
+package com.arjun.fitnessapp.model;
 
 import lombok.Getter;
 

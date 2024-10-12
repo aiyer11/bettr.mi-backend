@@ -1,4 +1,4 @@
-package com.arjun.fitnessapp.Exercise;
+package com.arjun.fitnessapp.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;

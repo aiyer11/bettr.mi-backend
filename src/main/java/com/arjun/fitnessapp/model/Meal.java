@@ -1,6 +1,5 @@
-package com.arjun.fitnessapp.Meal;
+package com.arjun.fitnessapp.model;
 
-import com.arjun.fitnessapp.Food.Food;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -45,5 +44,9 @@ public class Meal {
             this.totalFats += food.getFats();
             this.totalProtein += food.getProtein();
         }
+    }
+
+    public void addFood(Food food){
+        this.ingredients.add(food);
     }
 }

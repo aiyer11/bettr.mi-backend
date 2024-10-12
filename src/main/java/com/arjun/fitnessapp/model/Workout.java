@@ -1,6 +1,5 @@
-package com.arjun.fitnessapp.Workout;
+package com.arjun.fitnessapp.model;
 
-import com.arjun.fitnessapp.Exercise.Exercise;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package com.arjun.fitnessapp.Food;
+package com.arjun.fitnessapp.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

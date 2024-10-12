@@ -1,7 +1,10 @@
-package com.arjun.fitnessapp.Workout;
+package com.arjun.fitnessapp.service;
 
-import com.arjun.fitnessapp.Exercise.Exercise;
-import com.arjun.fitnessapp.Exercise.ExerciseRepository;
+import com.arjun.fitnessapp.model.Exercise;
+import com.arjun.fitnessapp.repository.ExerciseRepository;
+import com.arjun.fitnessapp.model.Workout;
+import com.arjun.fitnessapp.repository.WorkoutRepository;
+import com.arjun.fitnessapp.model.WorkoutType;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;

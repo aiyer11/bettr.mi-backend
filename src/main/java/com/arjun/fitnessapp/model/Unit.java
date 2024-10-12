@@ -1,4 +1,4 @@
-package com.arjun.fitnessapp.Food;
+package com.arjun.fitnessapp.model;
 
 import lombok.Getter;
 
@@ -16,5 +16,14 @@ public enum Unit {
 
     Unit(String unit) {
         this.unit = unit;
+    }
+
+    public static Unit findByUnit(String unit) {
+        for(Unit u: Unit.values()) {
+            if(u.getUnit().equals(unit)) {
+                return u;
+            }
+        }
+        return null;
     }
 }
