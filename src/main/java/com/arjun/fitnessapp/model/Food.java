@@ -18,9 +18,6 @@ public class Food {
     @Column(name="serving_size")
     private ServingSize servingSize;
 
-    @Column(name="meal")
-    private MealType mealType;
-
     @Column(name="calories")
     private double calories;
 
@@ -36,18 +33,14 @@ public class Food {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private HashMap<String,Double> macros;
-
-    public Food(String name, ServingSize servingSize, MealType mealType, double calories, double carbs, double protein, double fats)
+    public Food(String name, ServingSize servingSize, double calories, double carbs, double protein, double fats)
     {
         this.name = name;
         this.servingSize = servingSize;
-        this.mealType = mealType;
         this.calories = calories;
         this.carbs = carbs;
         this.protein = protein;
         this.fats = fats;
-        this.macros = new HashMap<>();
     }
 
 }

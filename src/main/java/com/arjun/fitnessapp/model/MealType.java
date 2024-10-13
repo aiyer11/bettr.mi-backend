@@ -15,4 +15,13 @@ public enum MealType {
     {
         this.meal = meal;
     }
+
+    public static MealType findByMeal(String meal){
+        for(MealType m: MealType.values()) {
+            if(m.getMeal().equals(meal)) {
+                return m;
+            }
+        }
+        return null;
+    }
 }

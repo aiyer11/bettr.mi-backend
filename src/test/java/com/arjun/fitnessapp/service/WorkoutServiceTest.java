@@ -1,11 +1,10 @@
-package com.arjun.fitnessapp.Workout;
+package com.arjun.fitnessapp.service;
 
 import com.arjun.fitnessapp.model.Exercise;
 import com.arjun.fitnessapp.model.Workout;
 import com.arjun.fitnessapp.model.WorkoutType;
 import com.arjun.fitnessapp.repository.ExerciseRepository;
 import com.arjun.fitnessapp.repository.WorkoutRepository;
-import com.arjun.fitnessapp.service.WorkoutService;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -27,8 +26,9 @@ public class WorkoutServiceTest {
 
     @BeforeEach
     void setUp() throws IOException, ParseException {
-        this.workoutService = new WorkoutService(this.workoutRepository,this.exerciseRepository);
-        FileReader fileReader = new FileReader("./src/test/resources/Workout/workoutServiceTest.json");
+        ExerciseService exerciseService = new ExerciseServiceImpl(this.exerciseRepository);
+        this.workoutService = new WorkoutServiceImpl(this.workoutRepository, exerciseService);
+        FileReader fileReader = new FileReader("./src/test/resources/workoutServiceTest.json");
         JSONParser parser = new JSONParser();
         this.workoutJson = (JSONObject) parser.parse(fileReader);
     }
